@@ -20,6 +20,8 @@ from web_api.views import get_classify_list, get_album_info_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 请求分类列表
     path('get_classify_list', get_classify_list),
-    path('get_album_info_list/', get_album_info_list),
+    # 请求图集列表
+    path('get_album_info_list', get_album_info_list),
 ]

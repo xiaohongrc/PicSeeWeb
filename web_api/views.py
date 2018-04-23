@@ -10,14 +10,17 @@ db_win_400 = client['win400']
 # 分类的url数据库
 sheet_classify = db_win_400['sheet_classify']
 # 分类下的图集列表数据库
-sheet_album_list = db_win_400['sheet_album_list']
 # 单个图集的信息数据库
 sheet_album_info = db_win_400['sheet_album_info']
 
 
 # 获取分类标题列表
-def get_classify_list():
-    return
+def get_classify_list(request):
+    result = []
+    for item in sheet_classify.find():
+         result.append(item)
+    # print(result)
+    return HttpResponse(dumps(result), content_type="application/json")
 
 
 # 获取图集信息列表
