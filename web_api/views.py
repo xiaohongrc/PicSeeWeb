@@ -24,10 +24,11 @@ def get_classify_list():
 def get_album_info_list(request):
     width = request.GET.get('width', None)
     albumUrl = request.GET.get('albumUrl', None)
-    result = [{"title": "titlename", "age": 3}]
-    # for item in sheet_album_info.find({'albumUrl':albumUrl}):
-    #     result.append(item)
-    print(result)
+    #result = [{"title": "titlename", "age": 3}]
+    result = []
+    for item in sheet_album_info.find({'width':width}):
+         result.append(item)
+    # print(result)
     return HttpResponse(dumps(result), content_type="application/json")
 
 # result = []

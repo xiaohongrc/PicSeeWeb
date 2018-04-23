@@ -25,7 +25,7 @@ SECRET_KEY = 'u3_iaf#ctsk=eqihurozy&#p81+e1lu+il*q3@&3^yx2l+c@&('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['47.104.214.219','0.0.0.0']
+ALLOWED_HOSTS = ['47.104.214.219','0.0.0.0','127.0.0.1']
 
 
 # Application definition
