@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from web_api.views import get_classify_list, get_album_info_list
+from web_api.views import get_classify_list, get_album_info_list,get_server_config
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     path('get_classify_list', get_classify_list),
     # 请求图集列表
     path('get_album_info_list', get_album_info_list),
+    # 请求配置
+    path('get_server_config', get_server_config),
 ]
