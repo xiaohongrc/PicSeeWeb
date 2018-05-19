@@ -17,7 +17,7 @@ sheet_classify = db_win_400['sheet_classify']
 
 def choose_db_by_country(country):
     country_classify = {'US': 'sheet_album_info_oumei', 'IN': 'sheet_album_info_yindu', 'KR': 'sheet_album_info_hanguo',
-                        'AE': 'sheet_album_info_alabo'}
+                        'AE': 'sheet_album_info_alabo', 'JP': 'sheet_album_info_riben', 'RU': 'sheet_album_info_eluosi'}
     return country_classify.get(country)
 
 
