@@ -17,7 +17,7 @@ sheet_classify = db_win_400['sheet_classify']
 
 def choose_db_by_country(country):
     country_classify = {'US': 'sheet_album_info_oumei', 'IN': 'sheet_album_info_yindu', 'KR': 'sheet_album_info_hanguo',
-                        'AE': 'sheet_album_info_alabo', 'JP': 'sheet_album_info_riben', 'RU': 'sheet_album_info_eluosi'}
+                        'JP': 'sheet_album_info_riben', 'RU': 'sheet_album_info_eluosi'}
     return country_classify.get(country)
 
 
@@ -46,8 +46,8 @@ def get_album_info_list(request):
 
     by_country = choose_db_by_country(country)
 
-    if (whichClassify == 'classify_meinv' and (by_country is not None)):
-        sheet_album_info = db_win_400[by_country]
+    # if (whichClassify == 'classify_meinv' and (by_country is not None)):
+    #     sheet_album_info = db_win_400[by_country]
 
     result = []
     for item in sheet_album_info.find({'whichClassify': whichClassify}).skip(page * limit).limit(limit):
