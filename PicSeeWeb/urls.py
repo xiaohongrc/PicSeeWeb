@@ -26,4 +26,5 @@ urlpatterns = [
     path('get_album_info_list', get_album_info_list),
     # 请求配置
     path('get_server_config', get_server_config),
+    path('cantonese_privacy', cantonese_privacy),
 ]
