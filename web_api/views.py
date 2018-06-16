@@ -14,6 +14,8 @@ sheet_classify = db_win_400['sheet_classify']
 # 分类下的图集列表数据库
 # 单个图集的信息数据库
 
+def cantonese_privacy(request):
+    return render(request,'cantonese_privacy.html')
 
 def choose_db_by_country(country):
     country_classify = {'US': 'sheet_album_info_oumei', 'IN': 'sheet_album_info_yindu', 'KR': 'sheet_album_info_hanguo',
